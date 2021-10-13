@@ -8,7 +8,7 @@ namespace Extensions
 {
     public static class Extensions
     {
-        public static bool GetOddIndexNumbers(this IEnumerable<int> source, out List<int> lll)
+        public static bool TryGetOddIndexNumbers(this IEnumerable<int> source, out List<int> lll)
         {
             lll = new List<int>();
             bool hasElement = false;
@@ -24,7 +24,7 @@ namespace Extensions
             }
             return hasElement;
         }
-        public static bool GetSumOfEvenNumbers(this IEnumerable<int> source, out int sum)
+        public static bool TryGetSumOfEvenNumbers(this IEnumerable<int> source, out int sum)
         {
             bool hasElement = false;
             sum = 0;
@@ -42,18 +42,13 @@ namespace Extensions
         {
             return source != null && source.Count() > 0;
         }
-        public static bool WordFromThirdLettersOfString(this string source, out string word)
+        public static bool TryGetWordFromThirdLettersOfString(this string source, out string word)
         {
             bool hasElement = false;
-            word = default(string);
-            int count = 0;
-            foreach (var item in source)
+            word = default(string);            
+            for (int i = 0; i < source.Lenght; i += 3)
             {
-                if (count % 3 == 0)
-                {
-                    word += item;
-                }
-                count += 1;
+                word += source[i];            
                 hasElement = true;
             }
             return hasElement;
