@@ -11,7 +11,7 @@ namespace Extensions
             /*----------------------------------------------------*/
 
             string a = "abcdefghijklmnop";
-            bool b = a.WordFromLettersOfString(out string word);
+            bool b = a.WordFromThirdLettersOfString(out string word);
             Console.WriteLine(word);
            
             Console.WriteLine(a.FirstAndLast());
