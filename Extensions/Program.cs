@@ -11,7 +11,7 @@ namespace Extensions
             /*----------------------------------------------------*/
 
             string a = "abcdefghijklmnop";
-            bool b = a.WordFromThirdLettersOfString(out string word);
+            bool b = a.TryGetWordFromThirdLettersOfString(out string word);
             Console.WriteLine(word);
            
             Console.WriteLine(a.FirstAndLast());
@@ -20,10 +20,10 @@ namespace Extensions
 
             List<int> numbers = new List<int>() { 12, 4, 5, 17, 2 };
 
-            numbers.GetSumOfEvenNumbers(out int sum);
+            numbers.TryGetSumOfEvenNumbers(out int sum);
             Console.WriteLine(sum);
 
-            numbers.GetOddIndexNumbers(out List<int> lll);
+            numbers.TryGetOddIndexNumbers(out List<int> lll);
             foreach (var item in lll)
             {
                 Console.WriteLine(item);
