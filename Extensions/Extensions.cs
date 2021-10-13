@@ -42,7 +42,7 @@ namespace Extensions
         {
             return source != null && source.Count() > 0;
         }
-        public static bool WordFromLettersOfString(this string source, out string word)
+        public static bool WordFromThirdLettersOfString(this string source, out string word)
         {
             bool hasElement = false;
             word = default(string);
